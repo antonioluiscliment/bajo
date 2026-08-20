@@ -1,0 +1,314 @@
+/* ============================================================
+   Tokens — paleta extraída del plano original (planta-base.svg)
+   ============================================================ */
+:root {
+  --cream:        #F7F1E8;
+  --cream-deep:    #EFE6D8;
+  --panel:         #DCD5C8;
+  --ink:           #2B2620;
+  --text:          #5A5347;
+  --text-soft:     #8A8578;
+  --terracota:     #C1622D;
+  --terracota-deep:#8A3B1E;
+  --teal:          #5B8794;
+  --teal-soft:     #DCE6E8;
+  --rule: 1px solid rgba(43,38,32,0.12);
+
+  --display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+  --body: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ============================================================
+   Cabecera
+   ============================================================ */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+  border-bottom: var(--rule);
+}
+
+.brand {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--terracota-deep);
+}
+
+.brand span { color: var(--text-soft); }
+
+.site-header nav {
+  display: flex;
+  gap: 28px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.site-header nav a { text-decoration: none; opacity: 0.75; transition: opacity .2s; }
+.site-header nav a:hover { opacity: 1; }
+
+/* ============================================================
+   Hero — planteamiento del cambio de uso
+   ============================================================ */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 64px 0 24px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 0 0 18px;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: var(--teal);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 22px;
+  max-width: 15ch;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--terracota-deep);
+}
+
+.lede {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  max-width: 56ch;
+  margin: 0 0 8px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: var(--rule);
+}
+
+.meta-item dt {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+
+.meta-item dd {
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ============================================================
+   Sección del plano — pieza central de la página
+   ============================================================ */
+.plan-section {
+  padding: 56px 0 72px;
+}
+
+.plan-section .section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.section-head h2 {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+.section-head p {
+  font-size: 14px;
+  color: var(--text-soft);
+  max-width: 42ch;
+  margin: 6px 0 0;
+}
+
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--terracota-deep);
+  background: rgba(193,98,45,0.1);
+  border: 1px solid rgba(193,98,45,0.28);
+  padding: 7px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--terracota);
+}
+
+.plan-frame {
+  background: #fff;
+  border: var(--rule);
+  border-radius: 4px;
+  padding: 18px;
+  box-shadow: 0 24px 48px -32px rgba(43,38,32,0.35);
+}
+
+.plan-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.plan-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 14px;
+  padding: 0 4px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-soft);
+  flex-wrap: wrap;
+}
+
+.plan-caption strong { color: var(--ink); font-weight: 600; }
+
+/* ============================================================
+   Próximos pasos — placeholder de alternativas
+   ============================================================ */
+.next-section {
+  padding: 8px 0 80px;
+}
+
+.next-section h2 {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+
+.alt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.alt-slot {
+  border: 1px dashed rgba(43,38,32,0.25);
+  border-radius: 4px;
+  padding: 28px 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--cream-deep);
+}
+
+.alt-slot .n {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.alt-slot .label {
+  font-size: 14.5px;
+  color: var(--text);
+}
+
+/* ============================================================
+   Pie
+   ============================================================ */
+.site-footer {
+  border-top: var(--rule);
+  padding: 26px 0 40px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-soft);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 640px) {
+  .wrap { padding: 0 20px; }
+  .site-header { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .hero { padding: 44px 0 12px; }
+  .hero-meta { gap: 20px; }
+}
+
+/* Accesibilidad: foco visible */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
