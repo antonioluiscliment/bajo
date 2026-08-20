@@ -1,0 +1,10 @@
+{
+  "name": "bajo-a-vivienda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cambio de uso de bajo comercial a vivienda — alternativas de distribución en planta",
+  "scripts": {
+    "build": "echo 'Sitio estático: no requiere build'",
+    "start": "npx serve ."
+  }
+}
